@@ -1,0 +1,24 @@
+﻿
+--INSTRUÇÕES SOBRE O ENTITY FRAMEWORK--
+1 - Instalar o EntityFramework
+
+*Deve ser compatível com a versão do framework, asp .net core
+
+2 - Criar as classes de modelo
+
+3 - Criar a classe de contexto
+	Herança do DbContext
+	Criar todos os DbSets<>
+	Criar o construtor de acordo com o exemplo
+
+4- Criar a string de conexão com o banco no arquivo appsetting.json
+
+5 - Configurar a injeção de dependência no arquivo startup.cs
+
+6 - Não é necessário habilitar as migrações
+
+7 - Adicionar uma migração
+	Add-Migration NOmeMigração
+
+8 - Atualizar banco
+	Update-Database -verbose

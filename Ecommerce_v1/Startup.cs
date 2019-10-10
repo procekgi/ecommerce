@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ecommerce_v1.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -30,6 +32,9 @@ namespace Ecommerce_v1
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            //Configurar a injeção de dependência 
+            services.AddDbContext<Context>
+                (options => options.UseSqlServer(Configuration.GetConnectionString("EcommerceConnection")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
@@ -53,7 +58,7 @@ namespace Ecommerce_v1
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Produto}/{action=Cadastrar}/{id?}");
             });
         }
     }
