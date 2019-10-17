@@ -12540,11 +12540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Source\\Repos\\NewRepo\\Ecommerce_v1\\Ecommerce_v1.csproj",
+      "projectUniqueName": "C:\\Users\\Aluno\\Source\\Repos\\ecommerce\\Ecommerce_v1\\Ecommerce_v1.csproj",
       "projectName": "Ecommerce_v1",
-      "projectPath": "C:\\Users\\Aluno\\Source\\Repos\\NewRepo\\Ecommerce_v1\\Ecommerce_v1.csproj",
+      "projectPath": "C:\\Users\\Aluno\\Source\\Repos\\ecommerce\\Ecommerce_v1\\Ecommerce_v1.csproj",
       "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Source\\Repos\\NewRepo\\Ecommerce_v1\\obj\\",
+      "outputPath": "C:\\Users\\Aluno\\Source\\Repos\\ecommerce\\Ecommerce_v1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

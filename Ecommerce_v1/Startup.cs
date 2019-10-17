@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ecommerce_v1.DAO;
 using Ecommerce_v1.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,7 +32,7 @@ namespace Ecommerce_v1
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
+            services.AddScoped<ProdutoDAO>();
             //Configurar a injeção de dependência 
             services.AddDbContext<Context>
                 (options => options.UseSqlServer(Configuration.GetConnectionString("EcommerceConnection")));

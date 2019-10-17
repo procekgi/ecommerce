@@ -20,5 +20,26 @@ namespace Ecommerce_v1.DAO
             _context.Add(p);
             _context.SaveChanges();
         }
+        public List<Produto> ListarProdutos()
+        {
+            return _context.Produtos.ToList();
+        }
+
+        public void RemoverProduto(int id)
+        {
+            _context.Produtos.Remove(BuscarProdutosPorId(id));
+            _context.SaveChanges();
+        }
+
+        public Produto BuscarProdutosPorId(int id)
+        {
+            return _context.Produtos.Find(id);
+        }
+
+        public void Alterar(Produto p)
+        {
+            _context.Update(p);
+            _context.SaveChanges();
+        }
     }
 }
