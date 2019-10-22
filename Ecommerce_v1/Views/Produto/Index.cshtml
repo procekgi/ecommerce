@@ -1,44 +1,46 @@
-﻿
+﻿@model List<Produto>
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     DateTime data = ViewBag.DataHora;
-    List < Produto > produtos = ViewBag.Produtos;
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
     <title>Index</title>
 </head>
 <body>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Nome:</th>
-                <th>Descrição:</th>
-                <th>Preço:</th>
-                <th>Quantidade:</th>
-                <th>Criado em:</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (Produto item in produtos)
-            {
+    <div>
+        <table class="table table-hover table-striped">
+            <thead>
                 <tr>
-                    <td>@item.Nome</td>
-                    <td>@item.Descricao</td>
-                    <td>@item.Preco</td>
-                    <td>@item.Quantidade</td>
-                    <td>@item.CriadoEm</td>
+                    <th>Nome:</th>
+                    <th>Descrição:</th>
+                    <th>Preço:</th>
+                    <th>Quantidade:</th>
+                    <th>Criado em:</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-    <p>
-        <b>Dados atualizados em: </b> @data
-    </p>
-
+            </thead>
+            <tbody>
+                @foreach (Produto item in Model)
+                {
+                    <tr>
+                        <td>@item.Nome</td>
+                        <td>@item.Descricao</td>
+                        <td>@item.Preco</td>
+                        <td>@item.Quantidade</td>
+                        <td>@item.CriadoEm</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <p>
+            <b>Dados atualizados em: </b> @data
+        </p>
+    </div>
+    <hr />
 </body>
 </html>

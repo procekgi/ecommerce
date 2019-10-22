@@ -5,10 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.11" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\css\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\css\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\css\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\css\js\bootstrap.js" />
+    <None Include="wwwroot\css\js\bootstrap.js.map" />
+    <None Include="wwwroot\css\js\bootstrap.min.js" />
+    <None Include="wwwroot\css\js\bootstrap.min.js.map" />
   </ItemGroup>
 
 </Project>

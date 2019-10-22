@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/css/bootstrap.css"  />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>    
+        <nav class="nav nav-tabs">
+            <a class="navbar-brand" href="#">Ecommerce</a>
+        </nav>
+        <div class="container" style="margin-top:30px;margin-bottom:30px">
+            @RenderBody()
+        </div>
+        
+        <footer>
+            <p style="text-align:center">&copy; @DateTime.Now.Year - Ecommerce</p>
+        </footer>    
+</body>
+</html>

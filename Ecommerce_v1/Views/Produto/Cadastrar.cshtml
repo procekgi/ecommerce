@@ -1,6 +1,10 @@
-﻿
-<!DOCTYPE html>
+﻿ 
+@model Produto
 
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -10,15 +14,18 @@
     <form asp-action="Cadastrar">
         
         <label>Nome:</label>
-        <input type="text" name="txtNome"/><br />
+        <input type="text" name="txtNome" class="form-control" id="Nome" asp-for="Nome"/><br />
 
         <label>Descrição:</label> 
-        <input type="text" name="txtDescricao"/><br />
+        <input type="text" name="txtDescricao" class="form-control" id="Descricao" asp-for="Descricao"/><br />
 
-        <label>Preço:</label> <input type="text" name="txtPreco"/><br />
-        <label>Quantidade:</label> <input type="text" name="txtQuantidade"/><br />
+        <label>Preço:</label> 
+        <input type="text" name="txtPreco" class="form-control" id="Preco" asp-for="Preco"/><br />
 
-        <input type="submit" value="Cadastrar" />
+        <label>Quantidade:</label>
+        <input type="text" name="txtQuantidade" class="form-control" id="Quantidade" asp-for="Quantidade"/><br />
+
+        <input type="submit" value="Cadastrar" class="btn btn-outline-success"/>
     </form>
 </body>
 </html>
